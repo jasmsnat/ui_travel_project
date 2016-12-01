@@ -4,11 +4,11 @@ angular.module("travelApp", ['ngRoute']);
 angular.module("travelApp").config(["$locationProvider", "$routeProvider", function($locationProvider, $routeProvider) {
     
     $routeProvider
-        .when("/", {
+        .when("/reservation", {
             controller: "reservationCtrl",
             templateUrl: "/code/views/reservationForm.html"
     })
-        .when("/", {
+        .when("/contact", {
             controller: "contactCtrl",
             templateUrl: "/code/views/contactForm.html"
     })
