@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="travelApp">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Travek Around The World</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.css">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="/node_modules/angular-flexslider/node_modules/flexslider/flexslider.css">
+    <link rel="stylesheet" href="/node_modules/ui-navbar/release/css/ui-navbar.css">
+    <link rel="stylesheet" href="/assets/css/modified.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+
+</head>
+
+<body style="transform: none;">
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div id="page-wrap" style="transform: none;">
+
+        <div ui-view="navi"></div>
+        <div ui-view="main"></div>
+
+    </div>
+    <!-- main div page wrap -->
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Jquery -->
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- AngularJS -->
+    <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+
+    <!-- AngularJS Modules -->
+    <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="/node_modules/ui-navbar/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-flexslider/node_modules/flexslider/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-flexslider/angular-flexslider.js"></script>
+
+    <!-- ui-navbar script -->
+    <script type="text/javascript" src="/assets/scripts/ui-navbar.js"></script>
+
+    <!-- app script -->
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/NavigationController.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/HomeSlider.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/MoreDestination.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/FormTabController.js"></script>
+
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>

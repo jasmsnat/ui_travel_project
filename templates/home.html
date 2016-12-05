@@ -1,0 +1,77 @@
+<!-- Home Slider
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="hero-section" ng-controller="HomeSlider">
+    <flex-slider flex-slide="s in slides" animation="slide" control-nav="false">
+        <li>
+            <img ng-src="{{s}}">
+        </li>
+    </flex-slider>
+</section>
+
+<!-- Form
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section ng-controller="FormTabController">
+    <div class="container">
+        <uib-tabset active="active" type="tabs" class="awe-search-tabs tabs ui-widget-content" template-url="/templates/custom_templates/custom-tabset.html">
+            <uib-tab index="0" heading="" template-url="/templates/custom_templates/custom-tab.html">
+                <uib-tab-heading>
+                    <i class="fa fa-briefcase awe-icon" aria-hidden="true"></i>
+                </uib-tab-heading>
+                <div class="row">
+                    <form role="form" name="contactForm" novalidate>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group" ng-class="{'has-error' : contactForm.subject.$invalid && contactForm.subject.$dirty}">
+                                <input type="text" name="subject" ng-model="contactEntryModel.msgSubject" class="form-control" placeholder="Subject" required>
+                                <span class="error" ng-show="contactForm.subject.$invalid && contactForm.subject.$dirty">Subject is required.</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group" ng-class="{'has-error' : contactForm.firstname.$invalid && contactForm.firstname.$dirty}">
+                                <input type="text" name="firstname" ng-model="contactEntryModel.msgFirstName" class="form-control" placeholder="First Name" required>
+                                <span class="error" ng-show="contactForm.firstname.$invalid && contactForm.firstname.$dirty">Firstname is required.</span>
+
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group" ng-class="{'has-error' : contactForm.lastname.$invalid && contactForm.lastname.$dirty}">
+                                <input type="text" name="lastname" ng-model="contactEntryModel.msgLastName" class="form-control" placeholder="Last Name" required>
+                                <span class="error" ng-show="contactForm.lastname.$invalid && contactForm.lastname.$dirty">Lastname is required.</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group" ng-class="{'has-error' : contactForm.email.$invalid && contactForm.email.$dirty}">
+                                <input type="email" name="email" ng-model="contactEntryModel.msgEmail" class="form-control input-sm" placeholder="Email Address" required>
+                                <span class="error" ng-show="contactForm.email.$error.required && contactForm.email.$dirty">Email Required</span>
+                                <span class="error" ng-show="contactForm.email.$error.email && contactForm.email.$dirty">Invalid Email Format</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <textarea name="message" class="form-control" ng-model="contactEntryModel.msgContent" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-6 col-md-12">
+                            <button type="button" class="btn btn-info" ng-disabled="contactForm.$invalid" ng-click="contactEntryFunctions.addContact()">Send</button>
+                        </div>
+
+                    </form>
+                </div>
+            </uib-tab>
+            <uib-tab index="$index + 1" ng-repeat="tab in tabs" template-url="/templates/custom_templates/custom-tab.html">
+                <uib-tab-heading>
+                    <i class="{{tab.tabIcon}} awe-icon"></i>
+                </uib-tab-heading>
+                <h2>{{tab.content}}</h2>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</section>
+
+<div ui-view="more-destination"></div>

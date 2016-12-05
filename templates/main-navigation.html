@@ -1,0 +1,29 @@
+<!-- Main Navbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<header id="header-page">
+    <div class="header-page__inner header-page__fixed" style="transform: translateY(0px);">
+        <div class="container">
+            <div class="logo">
+                <a ui-sref="home"><img src="/assets/images/logo.png" alt=""></a>
+            </div>
+            <nav class="navigation awe-navigation" data-responsive="1200" style="height: auto;">
+                <ul class="menu-list">
+                    <li class="menu-item-has-children" ui-sref-active="current-menu-parent"><a ui-sref="home">Home</a></li>
+                    <trees trees="mainNav"></trees>
+                    <!-- From app.js -->
+                </ul>
+            </nav>
+            <div class="search-box"><span class="searchtoggle"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <form class="form-search" style="right: 0px; width: 1140px;">
+                    <div class="form-item">
+                        <input type="text" value="Search &amp; hit enter">
+                    </div>
+                </form>
+            </div>
+            <a class="toggle-menu-responsive" href="#" style="display: none;">
+                <div class="hamburger"><span class="item item-1"></span> <span class="item item-2"></span> <span class="item item-3"></span></div>
+            </a>
+        </div>
+    </div>
+</header>

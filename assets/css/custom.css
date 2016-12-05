@@ -1,0 +1,30 @@
+/* Flexslider */
+
+.flexslider {
+    margin-bottom: 0;
+    border: none;
+}
+
+.awe-search-tabs .ui-tabs-nav li.active .ui-tabs-anchor,
+.tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    color: #0091EA;
+}
+
+.masonry-section-demo {
+    margin: 70px 0;
+}
+
+li.media {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.masonry-section-demo .section-title h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 400;
+    color: #2C4661;
+    line-height: 1.8em;
+    margin-top: 0;
+}
