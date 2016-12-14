@@ -4,7 +4,7 @@ var myApp = angular.module("travelApp", ['ui.bootstrap', 'ui.router', 'ui.navbar
 
 myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, redirect to /state1
-    $urlRouterProvider.otherwise("404");
+    $urlRouterProvider.otherwise("/");
     // Now set up the states
     $stateProvider
         .state('root', {
@@ -35,6 +35,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         .state('destination1', {
             parent: "root",
             url: "/destination1",
+            controller: "DestinationsController",
             templateUrl: "/templates/destinations.html"
         })
         .state('destination2', {
@@ -58,8 +59,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             url: "/404",
             templateUrl: "/templates/404.html"
         })
-        .state('contact-us', {
+        .state('contact', {
+            parent: "root",
             url: "/contact-us",
-            templateUrl: "/templates/contact-us.html"
+            controller: "ContactFormController",
+            templateUrl: "/templates/contactForm.html"
         })
 }]);

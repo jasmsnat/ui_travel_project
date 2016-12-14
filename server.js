@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var mysql = require("mysql");
 var connection = require("express-myconnection");
 var app = express();
-var basePath = "/service";
+var basePath = "/travel";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -24,45 +24,68 @@ app.listen(3000, function (req, res) {
 /* Database Connection */
 app.use(connection(mysql, {
     host: "localhost",
-    user: "travelapptest",
-    password: "test123",
-    database: "travelapp"
+    user: "admin",
+    password: "admin",
+    database: "travel"
 }, "request"));
 
-var getPostObj = {
-    reservation: {
-        url: basePath + "/reservation",
-        ids: [],
-        query: "INSERT INTO reservationform SET ?"
-    },
-    contact: {
-        url: basePath + "/contact",
-        ids: [],
-        query: "INSERT INTO contactform SET ?"
+// Post Service Object
+var postTravelObj = {
+    contactForm: {
+        query: "INSERT into contact_form set ?",
+        url: basePath + "/contactDetails",
+        ids: []
     }
 }
 
-for (var key in getPostObj) {
-    postService(getPostObj[key].url, getPostObj[key].ids, getPostObj[key].query);
+// For loop for postService
+for (var key in postTravelObj) {
+    postTravels(postTravelObj[key].url, postTravelObj[key].ids, postTravelObj[key].query);
 }
 
-function getService(url, ids, query) {
-    app.get(url, function (req, res, next) {
-
-    })
-}
-
-function postService(url, ids, query) {
+// Post Service
+function postTravels(url, ids, query) {
     app.post(url, function (req, res, next) {
         var reqObj = req.body;
         req.getConnection(function (err, connection) {
-            if (err) {
-                return next(err);
-            }
-            connection.query(query, reqObj, function (err, results) {
+            if (err) return next(err);
+
+            var queryx = connection.query(query, reqObj, function (err, results) {
                 if (err) {
                     console.log(err);
-                    return next("MySQL error, check POST query");
+                    return next("Mysql error");
+                }
+                res.json(results);
+            });
+        });
+    });
+}
+
+// Get Service Object
+var getServiceObj = {
+    person: {
+        query: "SELECT * FROM contact_form",
+        url: basePath + "/info",
+        ids: []
+    }
+}
+
+// For loop for getService
+for (var key in getServiceObj) {
+    getServices(getServiceObj[key].url, getServiceObj[key].ids, getServiceObj[key].query);
+}
+
+// Get Service
+function getServices(url, ids, query) {
+    app.get(url, function (req, res, next) {
+        var id = req.params[ids];
+        req.getConnection(function (err, connection) {
+            if (err) return next(err);
+
+            connection.query(query, id, function (err, results) {
+                if (err) {
+                    console.log(err);
+                    return next("Mysql error, check your query");
                 }
                 res.json(results);
             });

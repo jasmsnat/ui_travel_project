@@ -57,6 +57,15 @@
                             </div>
                         </div>
 
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <input type="text" ng-model="" placeholder="Custom popup templates" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+                            </div>
+                        </div>
+
+
+
                         <div class="col-xs-6 col-sm-6 col-md-12">
                             <button type="button" class="btn btn-info" ng-disabled="contactForm.$invalid" ng-click="contactEntryFunctions.addContact()">Send</button>
                         </div>

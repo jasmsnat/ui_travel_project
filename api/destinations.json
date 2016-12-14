@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Turkey",
+        "image": "/assets/images/turkey.jpg",
+        "desc": "Is a nation straddling eastern Europe and western Asia with cultural connections to ancient Greek, Persian, Roman, Byzantine and Ottoman empires. Cosmopolitan Istanbul, on the Bosphorus Strait, is home to the iconic Hagia Sophia, with its soaring dome and Christian mosaics, the massive 17th-century Blue Mosque and the circa-1460 Topkapı Palace, former home of sultans. Ankara is Turkey’s capital",
+        "alt": "Generic placeholder image",
+        "btnClass": "pull-left",
+        "imageClass": "pull-right"
+    }, {
+        "name": "USA",
+        "image": "/assets/images/usa.jpg",
+        "desc": "Is a country of 50 states covering a vast swath of North America, with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean. Major Atlantic Coast cities are New York, a global finance and culture center, and capital Washington, DC. Midwestern metropolis Chicago is known for influential architecture and on the west coast, Los Angeles' Hollywood is famed for filmmaking.",
+        "alt": "Generic placeholder image",
+        "btnClass": "pull-right",
+        "imageClass": "pull-left"
+    }, {
+        "name": "India",
+        "image": "/assets/images/india.png",
+        "desc": "India is a vast South Asian country with diverse terrain – from Himalayan peaks to Indian Ocean coastline – and history reaching back 5 millennia. In the north, Mughal Empire landmarks include Delhi’s Red Fort complex and massive Jama Masjid mosque, plus Agra’s iconic Taj Mahal mausoleum. Pilgrims bathe in the Ganges in Varanasi, and Rishikesh is a yoga centre and base for Himalayan trekking.",
+        "alt": "Generic placeholder image",
+        "btnClass": "pull-left",
+        "imageClass": "pull-right"
+    }, {
+        "name": "France",
+        "image": "/assets/images/paris.jpg",
+        "desc": "France in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower. The country is also renowned for its wines and sophisticated cuisine. Lascaux’s ancient cave drawings, Lyon’s Roman theater and the vast Palace of Versailles attest to its rich history.",
+        "alt": "Generic placeholder image",
+        "btnClass": "pull-right",
+        "imageClass": "pull-left"
+    }
+]

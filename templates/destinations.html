@@ -5,8 +5,22 @@
                 <h2>Destinations</h2>
             </div>
             <ul class="media-list">
+                <li class="media" ng-repeat="destination in destinations">
+                    {{destination.imageClass}}
+                    <a class="{{destination.image-class}}" href="#">
+                        <img class="media-object img-thumbnail" src="{{destination.image}}" alt="Generic placeholder image" width="304" height="304">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{destination.name}}</h4>
+                        <p>
+                            {{destination.desc}}
+                        </p>
+                        <p><a href="#" class="btn btn-danger {{destination.buttonClass}}" role="button">Button</a></p>
+                    </div>
+                </li>
+
                 <li class="media">
-                    <a class="pull-left" href="#">
+                    <a class="" href="#">
                         <img class="media-object img-thumbnail" src="/assets/images/turkey.jpg" alt="Generic placeholder image" width="304" height="304">
                     </a>
                     <div class="media-body">
